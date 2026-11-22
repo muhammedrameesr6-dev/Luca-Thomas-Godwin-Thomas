@@ -1482,6 +1482,21 @@ h1, h2, h3, h4, .font-cormorant {
   min-height: 480px;
 }
 
+.gallery-item-7 {
+  grid-column: span 7;
+  min-height: 450px;
+}
+
+.gallery-item-5 {
+  grid-column: span 5;
+  min-height: 450px;
+}
+
+.gallery-item-6 {
+  grid-column: span 6;
+  min-height: 380px;
+}
+
 .gallery-item-medium {
   grid-column: span 5;
   min-height: 230px;
@@ -1951,9 +1966,12 @@ h1, h2, h3, h4, .font-cormorant {
   .reception-info {
     order: 2;
   }
-  .gallery-item-featured {
+  .gallery-item-featured,
+  .gallery-item-7,
+  .gallery-item-5,
+  .gallery-item-6 {
     grid-column: span 12;
-    min-height: 400px;
+    min-height: 380px;
   }
   .gallery-item-medium {
     grid-column: span 6;
@@ -2059,5 +2077,14 @@ h1, h2, h3, h4, .font-cormorant {
   .child-photo-slot {
     max-width: 100%;
     height: 320px;
+  }
+  .gallery-grid {
+    gap: 1.15rem;
+  }
+  .gallery-item-7,
+  .gallery-item-5,
+  .gallery-item-6,
+  .gallery-item-featured {
+    min-height: 290px;
   }
 }
