@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="hostGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="70%" stop-color="#FAF0DF"/>
+      <stop offset="100%" stop-color="#E9D99D"/>
+    </radialGradient>
+    <linearGradient id="chaliceGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9D99D"/>
+      <stop offset="40%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9C7838"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(40, 42)">
+    <!-- Radiating Rays of Eucharistic Grace -->
+    <circle cx="0" cy="-22" r="14" stroke="#E9D99D" stroke-width="0.7" stroke-dasharray="1.5 2" opacity="0.7"/>
+    
+    <!-- Holy Host (Wafer) -->
+    <circle cx="0" cy="-22" r="10" fill="url(#hostGlow)" stroke="#C5A059" stroke-width="0.9"/>
+    <!-- Cross on Host (IHS/Cross) -->
+    <line x1="0" y1="-27" x2="0" y2="-17" stroke="#9C7838" stroke-width="0.9"/>
+    <line x1="-3" y1="-23" x2="3" y2="-23" stroke="#9C7838" stroke-width="0.9"/>
+
+    <!-- Chalice Cup -->
+    <path d="M -16,-6 C -16,10 0,16 0,16 C 0,16 16,10 16,-6 Z" fill="url(#chaliceGold)" opacity="0.95"/>
+    <ellipse cx="0" cy="-6" rx="16" ry="2.5" fill="#FAF0DF" stroke="#9C7838" stroke-width="0.8"/>
+    
+    <!-- Chalice Stem & Node -->
+    <path d="M -2.5,16 L -2.5,25 L 2.5,25 L 2.5,16 Z" fill="url(#chaliceGold)"/>
+    <ellipse cx="0" cy="20" rx="4.5" ry="2" fill="#E9D99D"/>
+
+    <!-- Chalice Base -->
+    <path d="M -14,29 C -14,25 -5,25 0,25 C 5,25 14,25 14,29 Z" fill="url(#chaliceGold)"/>
+    <ellipse cx="0" cy="29" rx="14" ry="2.5" fill="#C5A059"/>
+  </g>
+</svg>

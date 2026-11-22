@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Luca Thomas &amp; Godwin Thomas – Baptism &amp; Holy Communion Celebration</title>
+  <meta name="description" content="A sacred celebration of faith, innocence, and family love. Warmly inviting you to celebrate the Baptism of Luca Thomas and First Holy Communion of Godwin Thomas on Saturday, 19 December 2026 at St. Mathew's Church, Pozhiyoor.">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/cross-ornate.svg">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" aria-label="Loading Invitation">
+    <div class="preloader-emblem">
+      <img src="assets/images/floral-wreath.svg" alt="Botanical Wreath" class="preloader-wreath">
+      <img src="assets/images/cross-ornate.svg" alt="Sacred Cross" class="preloader-cross">
+    </div>
+    <div class="preloader-text">Luca &amp; Godwin</div>
+    <div class="preloader-subtext">Baptism &amp; Holy Communion</div>
+  </div>
+
+  <!-- Background Music (Invisible Autoplay) -->
+  <audio id="bgAudio" preload="auto" autoplay loop>
+    <source src="assets/audio/blessing_hymn.m4a" type="audio/mp4">
+    <source src="assets/audio/blessing_hymn.wav" type="audio/wav">
+  </audio>
+
+  <!-- Top Sticky / Glassmorphism Header -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Homepage">
+        <img src="assets/images/cross-ornate.svg" alt="Cross" class="nav-logo-cross">
+        <span class="nav-logo-text">Luca &amp; Godwin</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#invitation" class="nav-link">Invitation</a></li>
+          <li><a href="#children" class="nav-link">Children</a></li>
+          <li><a href="#family" class="nav-link">Family</a></li>
+          <li><a href="#details" class="nav-link">Celebration</a></li>
+          <li><a href="#church" class="nav-link">Church</a></li>
+          <li><a href="#reception" class="nav-link">Reception</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#blessings" class="btn-rsvp-nav">Send Blessings</a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#invitation" class="mobile-nav-link">Invitation</a></li>
+      <li><a href="#children" class="mobile-nav-link">Meet Our Children</a></li>
+      <li><a href="#family" class="mobile-nav-link">Our Family</a></li>
+      <li><a href="#details" class="mobile-nav-link">Celebration Details</a></li>
+      <li><a href="#church" class="mobile-nav-link">Church Location</a></li>
+      <li><a href="#reception" class="mobile-nav-link">Reception Venue</a></li>
+      <li><a href="#blessings" class="mobile-nav-link">Send Blessings</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         SECTION 01: HERO / OPENING EXPERIENCE (FEATURED PHOTO)
+         ======================================================================== -->
+    <section id="hero" class="hero-section">
+      <!-- Watercolor Floral Corner Embellishments -->
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-tl" aria-hidden="true">
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-tr" aria-hidden="true">
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-bl" aria-hidden="true">
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-br" aria-hidden="true">
+
+      <div class="container hero-inner">
+        <div class="hero-cross-wrap reveal-on-scroll">
+          <img src="assets/images/cross-ornate.svg" alt="Sacred Christian Cross">
+        </div>
+
+        <p class="hero-eyebrow reveal-on-scroll delay-1">A Celebration of Faith &amp; Blessings</p>
+
+        <h1 class="hero-names reveal-on-scroll delay-2">
+          Luca Thomas <span class="ampersand">&amp;</span> Godwin Thomas
+        </h1>
+
+        <div class="hero-subtitle-pills reveal-on-scroll delay-3">
+          <span class="hero-pill hero-pill-blue">Luca Thomas &bull; Baptism</span>
+          <span class="hero-pill-sep">&loz;</span>
+          <span class="hero-pill hero-pill-pink">Godwin Thomas &bull; Holy Communion</span>
+        </div>
+
+        <!-- Arch-Framed Original Featured Photograph -->
+        <div class="hero-photo-container reveal-scale delay-3">
+          <div class="hero-photo-frame">
+            <img src="assets/images/hero_brothers.jpg" alt="Luca Thomas &amp; Godwin Thomas in Celebration Suits" class="hero-photo-img" style="object-position: center 25%;">
+          </div>
+          <div class="hero-photo-badge">
+            <img src="assets/images/dove-peace.svg" alt="Dove" style="width: 18px; height: 18px;">
+            <span>Blessed Milestones</span>
+          </div>
+        </div>
+
+        <div class="hero-date-banner reveal-on-scroll delay-4">
+          <div class="hero-date-main">19 December 2026</div>
+          <div class="hero-date-sub">Saturday &bull; 5:00 PM &bull; St. Mathew's Church, Pozhiyoor</div>
+        </div>
+
+        <a href="#invitation" class="hero-scroll-btn reveal-on-scroll delay-5">
+          <span>Discover Our Celebration</span>
+          <svg class="hero-scroll-arrow" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 02: INVITATION MESSAGE (TEXT ONLY)
+         ======================================================================== -->
+    <section id="invitation" class="invitation-section">
+      <div class="container">
+        <div class="invitation-card reveal-on-scroll">
+          <span class="section-label">Cordially Invited</span>
+          <h2 class="section-title">With Joyful Hearts</h2>
+          
+          <img src="assets/images/floral-divider.svg" alt="Floral Cross Divider" class="ornamental-divider" aria-hidden="true">
+
+          <p class="invitation-body-text">
+            &ldquo;With hearts filled with gratitude and joy, we warmly invite you to join us as we celebrate two precious milestones of faith in the lives of our beloved children, Luca Thomas and Godwin Thomas.
+            <br><br>
+            Your presence and blessings will make this special day even more memorable.&rdquo;
+          </p>
+
+          <img src="assets/images/floral-divider.svg" alt="Floral Cross Divider" class="ornamental-divider" aria-hidden="true">
+
+          <p class="invitation-scripture">
+            &ldquo;Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these.&rdquo;
+            <span class="invitation-scripture-ref">&ndash; Matthew 19:14</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 03: MEET OUR CHILDREN (PRAYER & MILESTONE CARDS - NO PHOTOS)
+         ======================================================================== -->
+    <section id="children" class="children-section">
+      <div class="container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-label">Two Sacred Journeys</span>
+          <h2 class="section-title">Meet Our Children</h2>
+          <p style="color: var(--color-warm-grey); font-size: 1.05rem;">
+            Cherishing two sacred steps in Christian discipleship, wrapped in God's grace and unconditional family devotion.
+          </p>
+          <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" aria-hidden="true">
+        </div>
+
+        <div class="children-grid">
+          <!-- Child 1: Luca Thomas (Baptism) -->
+          <div class="child-card child-card-luca reveal-on-scroll delay-1" style="padding: 3rem 2rem;">
+            <div class="child-card-arch-accent"></div>
+            
+            <div class="child-emblem-wrap" style="width: 82px; height: 82px; margin-bottom: 1.5rem;">
+              <img src="assets/images/baptism-shell.svg" alt="Baptismal Shell &amp; Grace" class="child-emblem-icon" style="width: 52px; height: 52px;">
+            </div>
+
+            <span class="child-occasion-tag tag-baptism">Sacrament of Holy Baptism</span>
+            <h3 class="child-name">Luca Thomas</h3>
+            
+            <div class="child-scripture-box">
+              <p class="child-scripture-text">&ldquo;I have baptized you with water, but He will baptize you with the Holy Spirit.&rdquo;</p>
+              <span class="child-scripture-cite">&ndash; Mark 1:8</span>
+            </div>
+
+            <p class="child-caption" style="margin-bottom: 2rem;">
+              Welcomed into Christ's holy flock and washed in the gentle living waters of faith. May Luca's life always shine with divine light, innocent joy, and heavenly peace.
+            </p>
+
+            <div style="padding: 0.65rem 1.45rem; background: var(--color-powder-light); border: 1px solid var(--color-pastel-blue); border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-pastel-blue-dark);"><circle cx="12" cy="12" r="10"/></svg>
+              <span style="font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-deep-charcoal); font-weight: 600;">
+                Sacrament of Holy Baptism &bull; 19 Dec 2026
+              </span>
+            </div>
+          </div>
+
+          <!-- Child 2: Godwin Thomas (Holy Communion) -->
+          <div class="child-card child-card-godwin reveal-on-scroll delay-2" style="padding: 3rem 2rem;">
+            <div class="child-card-arch-accent"></div>
+
+            <div class="child-emblem-wrap" style="width: 82px; height: 82px; margin-bottom: 1.5rem; background: var(--color-blush-soft); border-color: var(--color-blush-pink);">
+              <img src="assets/images/chalice-communion.svg" alt="First Holy Communion Chalice" class="child-emblem-icon" style="width: 52px; height: 52px;">
+            </div>
+
+            <span class="child-occasion-tag tag-communion">First Holy Communion</span>
+            <h3 class="child-name">Godwin Thomas</h3>
+
+            <div class="child-scripture-box">
+              <p class="child-scripture-text">&ldquo;I am the bread of life. Whoever comes to me will never go hungry.&rdquo;</p>
+              <span class="child-scripture-cite">&ndash; John 6:35</span>
+            </div>
+
+            <p class="child-caption" style="margin-bottom: 2rem;">
+              Receiving the bread of life and the light of Christ for the very first time. May Godwin's heart always be guided by wisdom, faith, kindness, and eternal love.
+            </p>
+
+            <div style="padding: 0.65rem 1.45rem; background: var(--color-blush-soft); border: 1px solid var(--color-blush-pink); border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-blush-pink);"><circle cx="12" cy="12" r="10"/></svg>
+              <span style="font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-deep-charcoal); font-weight: 600;">
+                Sacrament of Holy Eucharist &bull; 19 Dec 2026
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 04: FAMILY SECTION (TEXT ONLY - NO PHOTOS)
+         ======================================================================== -->
+    <section id="family" class="family-section">
+      <div class="container">
+        <div class="family-card reveal-on-scroll">
+          <div class="family-wreath-wrap">
+            <img src="assets/images/floral-wreath.svg" alt="Botanical Wreath" class="family-wreath-svg">
+            <span class="family-monogram">T &amp; L</span>
+          </div>
+
+          <span class="section-label">Rooted in Faith &amp; Devotion</span>
+          <h2 class="section-title">With Love From Our Family</h2>
+          
+          <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" aria-hidden="true">
+
+          <div class="family-parents-names">Anil Thomas &amp; Preema Lopes</div>
+          <div class="family-parents-title">Parents</div>
+
+          <p class="family-message" style="max-width: 680px; margin: 1.5rem auto 2.5rem; font-size: 1.15rem; line-height: 1.9;">
+            &ldquo;As parents, seeing our children take these blessed spiritual steps is the greatest gift of our lives. We offer our deepest prayers of praise and gratitude to Almighty God for blessing our home with Luca and Godwin. We warmly ask for your prayers and joyful fellowship as we guide them in Christ's love.&rdquo;
+          </p>
+
+          <div style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.75rem 2rem; background: var(--color-powder-light); border: 1px dashed var(--color-pastel-blue); border-radius: var(--radius-full);">
+            <img src="assets/images/cross-ornate.svg" alt="Cross" style="width: 16px; height: 16px;">
+            <span style="font-family: var(--font-cormorant); font-size: 1.1rem; font-weight: 600; color: var(--color-deep-charcoal); letter-spacing: 0.05em;">
+              United in Prayer &bull; Bound in Love &bull; Pozhiyoor
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 05: CELEBRATION DETAILS (NO PHOTOS)
+         ======================================================================== -->
+    <section id="details" class="details-section">
+      <div class="container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-label">Event Schedule</span>
+          <h2 class="section-title">Celebration Details</h2>
+          <p style="color: var(--color-warm-grey); font-size: 1.05rem;">
+            Please join us in the sacred liturgy and subsequent fellowship as we celebrate with joyful hearts.
+          </p>
+          <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" aria-hidden="true">
+        </div>
+
+        <div class="details-grid">
+          <!-- Card 1: Date -->
+          <div class="detail-card reveal-on-scroll delay-1">
+            <div class="detail-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="detail-card-text">
+              <div class="detail-card-title">The Sacred Date</div>
+              <div class="detail-card-primary">19 December 2026</div>
+              <div class="detail-card-sub">Saturday Evening</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Time & Liturgy -->
+          <div class="detail-card reveal-on-scroll delay-2">
+            <div class="detail-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="detail-card-text">
+              <div class="detail-card-title">Holy Mass &amp; Sacraments</div>
+              <div class="detail-card-primary">5:00 PM</div>
+              <div class="detail-card-sub">Baptism &amp; Holy Communion Service</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Location -->
+          <div class="detail-card reveal-on-scroll delay-3">
+            <div class="detail-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="detail-card-text">
+              <div class="detail-card-title">The Sacred Sanctuary</div>
+              <div class="detail-card-primary">St. Mathew's Church</div>
+              <div class="detail-card-sub">Pozhiyoor, Thiruvananthapuram</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-container reveal-on-scroll">
+          <div class="countdown-title">Counting Down To The Holy Celebration</div>
+          <div class="countdown-grid">
+            <div class="countdown-item">
+              <span id="cdDays" class="countdown-number">--</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cdHours" class="countdown-number">--</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cdMins" class="countdown-number">--</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span id="cdSecs" class="countdown-number">--</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+
+          <!-- Add to Calendar -->
+          <div class="calendar-actions">
+            <a href="#" id="btnGoogleCal" class="btn-cal btn-cal-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+              </svg>
+              <span>Add to Google Calendar</span>
+            </a>
+            <a href="#" id="btnIcal" class="btn-cal btn-cal-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>Download iCal / Outlook</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 06: CHURCH LOCATION (EDITORIAL CARD - NO PHOTOS)
+         ======================================================================== -->
+    <section id="church" class="church-section">
+      <div class="container">
+        <div class="venue-card-centered reveal-on-scroll">
+          <div class="venue-card-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L2 7v14h20V7L12 2z"></path>
+              <path d="M12 11v6"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+          </div>
+
+          <span class="section-label">The Sacred Celebration</span>
+          <h2 class="location-name" style="margin-bottom: 0.5rem;">St. Mathew's Church</h2>
+          
+          <div class="location-place" style="justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>South Kollencode, Pozhiyoor, Thiruvananthapuram, Kerala</span>
+          </div>
+
+          <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" style="max-width: 320px; margin: 1rem auto 1.5rem;" aria-hidden="true">
+
+          <p class="location-desc" style="max-width: 640px; margin: 0 auto 2rem;">
+            The sacred rites of Luca's Holy Baptism and Godwin's First Holy Communion will be solemnized at the historic St. Mathew's Church, Pozhiyoor. Join us in the sanctuary as we witness these blessed sacramental vows before God and family.
+          </p>
+
+          <div class="location-action-btns" style="justify-content: center;">
+            <a href="https://maps.app.goo.gl/hK6WAzEh7v3pxY8k9?g_st=aw" target="_blank" rel="noopener noreferrer" class="btn-primary-map">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
+              <span>View Church Location</span>
+            </a>
+            <button id="copyChurchAddress" class="btn-secondary-copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Address</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 07: RECEPTION VENUE (EDITORIAL CARD - NO PHOTOS)
+         ======================================================================== -->
+    <section id="reception" class="reception-section">
+      <div class="container">
+        <div class="venue-card-centered reveal-on-scroll">
+          <div class="venue-card-icon-wrap" style="background: var(--color-blush-soft); border-color: var(--color-blush-pink);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+
+          <span class="section-label">Evening Fellowship &amp; Dinner</span>
+          <h2 class="location-name" style="margin-bottom: 0.5rem;">Carmel Sports Club</h2>
+          
+          <div class="location-place" style="justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Carmel Sports Club / Hub, Pozhiyoor, Kerala</span>
+          </div>
+
+          <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" style="max-width: 320px; margin: 1rem auto 1.5rem;" aria-hidden="true">
+
+          <p class="location-desc" style="max-width: 640px; margin: 0 auto 2rem;">
+            Following the solemn church mass, please join our family for an evening of joyous celebration, banquet dinner, music, and heartwarming fellowship at Carmel Sports Club. Your presence will multiply our happiness!
+          </p>
+
+          <div class="location-action-btns" style="justify-content: center;">
+            <a href="https://maps.app.goo.gl/WGrYPNZh3La7R7nu5?g_st=aw" target="_blank" rel="noopener noreferrer" class="btn-primary-map">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
+              <span>Get Directions</span>
+            </a>
+            <button id="copyReceptionAddress" class="btn-secondary-copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Address</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 08: CLOSING SECTION & BLESSINGS GUESTBOOK (NO PHOTOS)
+         ======================================================================== -->
+    <section id="blessings" class="closing-section">
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-tl" aria-hidden="true">
+      <img src="assets/images/floral-corner.svg" alt="Floral Corner" class="floral-corner floral-corner-tr" aria-hidden="true">
+      
+      <div class="container">
+        <div class="closing-card reveal-on-scroll">
+          <div class="hero-cross-wrap" style="margin: 0 auto 1.5rem;">
+            <img src="assets/images/cross-ornate.svg" alt="Christian Cross">
+          </div>
+
+          <h2 class="closing-heading">Thank You For Being Part Of Our Special Day</h2>
+
+          <img src="assets/images/floral-divider.svg" alt="Floral Divider" class="ornamental-divider" aria-hidden="true">
+
+          <p class="closing-text">
+            &ldquo;Your presence, prayers and blessings mean the world to our family. We look forward to celebrating this beautiful occasion with you.&rdquo;
+          </p>
+
+          <div class="closing-signature-wrap">
+            <span class="closing-with-love">With Love,</span>
+            <span class="closing-parents-sign">Anil Thomas &amp; Preema Lopes</span>
+            <span style="font-size: 0.85rem; color: var(--color-warm-grey); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem;">
+              Pozhiyoor &bull; 19 December 2026
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive Warm Wishes & Prayers Guestbook -->
+        <div class="guestbook-wrap reveal-on-scroll">
+          <h3 class="guestbook-title">Send a Prayer or Warm Wish</h3>
+          <p class="guestbook-sub">Leave a gentle blessing for young Luca &amp; Godwin</p>
+
+          <form id="guestbookForm" class="guestbook-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="blessingAuthor" class="form-label">Your Name</label>
+                <input type="text" id="blessingAuthor" class="form-input" placeholder="e.g. Uncle Joseph &amp; Family" required>
+              </div>
+              <div class="form-group">
+                <label for="blessingRelation" class="form-label">Relation / Note (Optional)</label>
+                <input type="text" id="blessingRelation" class="form-input" placeholder="e.g. Well-wisher / Godparents">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="blessingText" class="form-label">Your Blessing or Prayer</label>
+              <textarea id="blessingText" class="form-textarea" placeholder="Write your warm wishes and prayers for Luca and Godwin..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-blessing">Share Blessing</button>
+          </form>
+
+          <div id="blessingsList" class="blessings-list">
+            <!-- Dynamically populated from JS / localStorage -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <img src="assets/images/cross-ornate.svg" alt="Cross" class="footer-cross">
+      <div class="footer-text">Luca Thomas &bull; Baptism &nbsp;|&nbsp; Godwin Thomas &bull; Holy Communion</div>
+      <div class="footer-sub">St. Mathew's Church, Pozhiyoor &bull; 19 December 2026 &bull; Anil Thomas &amp; Preema Lopes</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
