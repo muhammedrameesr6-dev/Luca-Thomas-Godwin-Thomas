@@ -292,18 +292,94 @@ document.addEventListener('DOMContentLoaded', () => {
     loadBlessings();
   }
 
-  // 9. Photo Gallery Lightbox
+  // 9. Photo Showcase Carousel ("A Beautiful Moment")
+  const trackContainer = document.getElementById('galleryTrackContainer');
+  const track = document.getElementById('galleryTrack');
+  const prevBtn = document.getElementById('galleryPrevBtn');
+  const nextBtn = document.getElementById('galleryNextBtn');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const currentSlideNum = document.getElementById('currentSlideNum');
+
+  if (trackContainer && slides.length > 0) {
+    // Scroll by one slide
+    const scrollSlide = (direction) => {
+      const slideWidth = slides[0].offsetWidth;
+      const gap = 24;
+      const scrollAmount = (slideWidth + gap) * direction;
+      trackContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => scrollSlide(-1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => scrollSlide(1));
+    }
+
+    // Dot click navigation
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        if (slides[idx]) {
+          const slideLeft = slides[idx].offsetLeft - trackContainer.offsetLeft;
+          const target = slideLeft - (trackContainer.clientWidth - slides[idx].offsetWidth) / 2;
+          trackContainer.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Update active slide, indicator dots, and counter on scroll
+    let scrollTimeout;
+    const updateActiveSlide = () => {
+      const containerCenter = trackContainer.scrollLeft + trackContainer.clientWidth / 2;
+      let closestIdx = 0;
+      let minDiff = Infinity;
+
+      slides.forEach((slide, idx) => {
+        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+        const diff = Math.abs(containerCenter - slideCenter);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = idx;
+        }
+      });
+
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === closestIdx);
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === closestIdx);
+      });
+
+      if (currentSlideNum) {
+        currentSlideNum.textContent = closestIdx + 1;
+      }
+    };
+
+    trackContainer.addEventListener('scroll', () => {
+      if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+      scrollTimeout = requestAnimationFrame(updateActiveSlide);
+    }, { passive: true });
+
+    updateActiveSlide();
+  }
+
+  // 10. Photo Gallery Lightbox
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCaption = document.getElementById('lightboxCaption');
   const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
 
-  if (lightboxModal && galleryItems.length > 0) {
-    galleryItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const img = item.querySelector('.gallery-img');
-        const caption = item.getAttribute('data-caption') || item.querySelector('.gallery-overlay-title')?.textContent || '';
+  if (lightboxModal && slides.length > 0) {
+    slides.forEach((slide) => {
+      const card = slide.querySelector('.carousel-card');
+      const expandBtn = slide.querySelector('.carousel-expand-btn');
+
+      const openModal = (e) => {
+        const img = slide.querySelector('.carousel-card-img');
+        const caption = slide.getAttribute('data-caption') || slide.querySelector('.carousel-card-title')?.textContent || '';
         if (img && lightboxImg) {
           lightboxImg.src = img.src;
           lightboxImg.alt = img.alt || 'Enlarged photo';
@@ -313,7 +389,17 @@ document.addEventListener('DOMContentLoaded', () => {
           lightboxModal.classList.add('active');
           document.body.style.overflow = 'hidden';
         }
-      });
+      };
+
+      if (card) {
+        card.addEventListener('click', openModal);
+      }
+      if (expandBtn) {
+        expandBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openModal(e);
+        });
+      }
     });
 
     const closeLightbox = () => {
