@@ -474,11 +474,13 @@ h1, h2, h3, h4, .font-cormorant {
 /* Featured Child Photo Arch Frame */
 .hero-photo-container {
   position: relative;
-  margin: 1.5rem 0 2.5rem;
+  margin: 1.5rem auto 2.5rem;
   padding: 16px;
   border-radius: var(--radius-arch);
   background: linear-gradient(135deg, rgba(250, 247, 240, 0.95), rgba(220, 233, 245, 0.6));
   box-shadow: var(--shadow-card), 0 0 0 1px rgba(175, 199, 224, 0.4);
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
 }
 
 .hero-photo-container::before {
@@ -524,8 +526,18 @@ h1, h2, h3, h4, .font-cormorant {
   box-shadow: var(--shadow-subtle);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
+  width: max-content;
+  z-index: 5;
+}
+
+.hero-photo-badge::after {
+  content: '';
+  display: block;
+  width: 18px; /* Optically balances the 18px dove icon on the left */
+  height: 18px;
 }
 
 .hero-photo-badge span {
@@ -923,6 +935,36 @@ h1, h2, h3, h4, .font-cormorant {
   color: var(--color-warm-grey);
   max-width: 640px;
   margin: 0 auto 2rem;
+}
+
+.family-prayer-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.85rem;
+  background: var(--color-powder-light);
+  border: 1px dashed var(--color-pastel-blue);
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.family-prayer-cross {
+  width: 18px;
+  height: 18px;
+}
+
+.family-prayer-text {
+  font-family: var(--font-cormorant);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-deep-charcoal);
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .family-photo-placeholder {
@@ -2152,9 +2194,32 @@ h1, h2, h3, h4, .font-cormorant {
     padding-bottom: 3.5rem;
   }
   .hero-names {
-    font-size: clamp(1.85rem, 7vw, 2.35rem);
+    font-size: clamp(1.2rem, 5.2vw, 1.55rem);
     line-height: 1.2;
-    padding: 0 0.5rem;
+    padding: 0 0.25rem;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  .hero-subtitle-pills {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.85rem 0 1.85rem;
+  }
+  .hero-pill-sep {
+    display: none;
+  }
+  .hero-pill {
+    padding: 0.4rem 1.15rem;
+    font-size: 0.78rem;
+    text-align: center;
+    width: max-content;
+    max-width: 90vw;
+  }
+  .invitation-body-text {
+    font-size: clamp(1.15rem, 4.2vw, 1.35rem);
+    line-height: 1.75;
+    padding: 0 0.25rem;
   }
   .hero-photo-frame {
     width: clamp(240px, 75vw, 300px);
@@ -2265,5 +2330,19 @@ h1, h2, h3, h4, .font-cormorant {
   }
   .carousel-card-title {
     font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-names {
+    font-size: clamp(1.05rem, 4.8vw, 1.25rem);
+    white-space: nowrap;
+  }
+  .hero-names .ampersand {
+    margin: 0 0.15rem;
+  }
+  .hero-photo-frame {
+    width: clamp(230px, 80vw, 270px);
+    height: clamp(310px, 98vw, 370px);
   }
 }
