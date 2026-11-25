@@ -57,7 +57,6 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="#blessings" class="btn-rsvp-nav">Send Blessings</a>
         <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
@@ -78,7 +77,6 @@
       <li><a href="#church" class="mobile-nav-link">Church Location</a></li>
       <li><a href="#reception" class="mobile-nav-link">Reception Venue</a></li>
       <li><a href="#gallery" class="mobile-nav-link">Photo Gallery</a></li>
-      <li><a href="#blessings" class="mobile-nav-link">Send Blessings</a></li>
     </ul>
   </div>
 
@@ -247,7 +245,11 @@
           
           <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" aria-hidden="true">
 
-          <div class="family-parents-names">Anil Thomas &amp; Preema Lopes</div>
+          <div class="family-parents-names">
+            <span>Anil Thomas</span>
+            <span class="family-ampersand">&amp;</span>
+            <span>Preema Lopes</span>
+          </div>
           <div class="family-parents-title">Parents</div>
 
           <p class="family-message" style="max-width: 680px; margin: 1.5rem auto 2.5rem; font-size: 1.15rem; line-height: 1.9;">
@@ -257,7 +259,7 @@
           <div class="family-prayer-badge">
             <img src="assets/images/cross-ornate.svg" alt="Cross" class="family-prayer-cross">
             <span class="family-prayer-text">
-              United in Prayer &bull; Bound in Love &bull; Pozhiyoor
+              United in Prayer &bull; Bound in Love
             </span>
           </div>
         </div>
@@ -436,20 +438,20 @@
           </div>
 
           <span class="section-label">Evening Fellowship &amp; Dinner</span>
-          <h2 class="location-name" style="margin-bottom: 0.5rem;">Carmel Sports Club</h2>
+          <h2 class="location-name" style="margin-bottom: 0.5rem;">Carmel Sports Hub</h2>
           
           <div class="location-place" style="justify-content: center; margin-bottom: 1.5rem;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Carmel Sports Club / Hub, Pozhiyoor, Kerala</span>
+            <span>Pozhiyoor, Kerala</span>
           </div>
 
           <img src="assets/images/floral-divider.svg" alt="Divider" class="ornamental-divider" style="max-width: 320px; margin: 1rem auto 1.5rem;" aria-hidden="true">
 
           <p class="location-desc" style="max-width: 640px; margin: 0 auto 2rem;">
-            Following the solemn church mass, please join our family for an evening of joyous celebration, banquet dinner, music, and heartwarming fellowship at Carmel Sports Club. Your presence will multiply our happiness!
+            Following the solemn church mass, please join our family for an evening of joyous celebration, banquet dinner, music, and heartwarming fellowship at Carmel Sports Hub. Your presence will multiply our happiness!
           </p>
 
           <div class="location-action-btns" style="justify-content: center;">
@@ -646,40 +648,14 @@
 
           <div class="closing-signature-wrap">
             <span class="closing-with-love">With Love,</span>
-            <span class="closing-parents-sign">Anil Thomas &amp; Preema Lopes</span>
+            <div class="closing-parents-sign">
+              <span>Anil Thomas</span>
+              <span class="family-ampersand">&amp;</span>
+              <span>Preema Lopes</span>
+            </div>
             <span style="font-size: 0.85rem; color: var(--color-warm-grey); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem;">
               Pozhiyoor &bull; 19 December 2026
             </span>
-          </div>
-        </div>
-
-        <!-- Interactive Warm Wishes & Prayers Guestbook -->
-        <div class="guestbook-wrap reveal-on-scroll">
-          <h3 class="guestbook-title">Send a Prayer or Warm Wish</h3>
-          <p class="guestbook-sub">Leave a gentle blessing for young Luca &amp; Godwin</p>
-
-          <form id="guestbookForm" class="guestbook-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="blessingAuthor" class="form-label">Your Name</label>
-                <input type="text" id="blessingAuthor" class="form-input" placeholder="e.g. Uncle Joseph &amp; Family" required>
-              </div>
-              <div class="form-group">
-                <label for="blessingRelation" class="form-label">Relation / Note (Optional)</label>
-                <input type="text" id="blessingRelation" class="form-input" placeholder="e.g. Well-wisher / Godparents">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="blessingText" class="form-label">Your Blessing or Prayer</label>
-              <textarea id="blessingText" class="form-textarea" placeholder="Write your warm wishes and prayers for Luca and Godwin..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit-blessing">Share Blessing</button>
-          </form>
-
-          <div id="blessingsList" class="blessings-list">
-            <!-- Dynamically populated from JS / localStorage -->
           </div>
         </div>
       </div>

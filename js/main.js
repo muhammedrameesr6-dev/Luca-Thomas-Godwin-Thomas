@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const gcalBtn = document.getElementById('btnGoogleCal');
   if (gcalBtn) {
     const title = encodeURIComponent('Baptism & Holy Communion – Luca Thomas & Godwin Thomas');
-    const details = encodeURIComponent('Join Anil Thomas & Preema Lopes in celebrating the Baptism of Luca Thomas and the First Holy Communion of Godwin Thomas at St. Mathew\'s Church, Pozhiyoor followed by reception at Carmel Sports Club.');
+    const details = encodeURIComponent('Join Anil Thomas & Preema Lopes in celebrating the Baptism of Luca Thomas and the First Holy Communion of Godwin Thomas at St. Mathew\'s Church, Pozhiyoor followed by reception at Carmel Sports Hub.');
     const location = encodeURIComponent('St. Mathew\'s Church, Pozhiyoor, Kerala');
     // 20261219T113000Z to 20261219T153000Z (5:00 PM IST is 11:30 AM UTC)
     const dates = '20261219T113000Z/20261219T153000Z';
@@ -200,99 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyReceptionBtn = document.getElementById('copyReceptionAddress');
   if (copyReceptionBtn) {
     copyReceptionBtn.addEventListener('click', () => {
-      const address = "Carmel Sports Club / Hub, Pozhiyoor, Kerala";
+      const address = "Carmel Sports Hub, Pozhiyoor, Kerala";
       navigator.clipboard.writeText(address).then(() => {
         showToast('Reception venue address copied to clipboard!');
       }).catch(() => {
-        showToast('Copied: Carmel Sports Club, Pozhiyoor');
+        showToast('Copied: Carmel Sports Hub, Pozhiyoor');
       });
     });
   }
 
-  // 8. Blessings Guestbook (Saved to localStorage)
-  const guestbookForm = document.getElementById('guestbookForm');
-  const blessingsList = document.getElementById('blessingsList');
-
-  const defaultBlessings = [
-    {
-      author: 'Rev. Fr. & Parish Community',
-      date: 'Blessing',
-      message: 'May God\'s grace and Holy Spirit forever guide young Luca in faith and light, and may the Holy Eucharist strengthen dear Godwin on every step of his spiritual journey.'
-    },
-    {
-      author: 'Dearest Family Friends',
-      date: 'With Love',
-      message: 'Congratulations Anil and Preema on this joyful dual celebration! Luca and Godwin look absolutely precious. Showering abundant prayers, happiness, and peace upon your beautiful family.'
-    }
-  ];
-
-  const loadBlessings = () => {
-    let saved = [];
-    try {
-      const stored = localStorage.getItem('luca_godwin_blessings');
-      saved = stored ? JSON.parse(stored) : defaultBlessings;
-    } catch (e) {
-      saved = defaultBlessings;
-    }
-
-    if (!blessingsList) return;
-    blessingsList.innerHTML = '';
-
-    saved.forEach((item) => {
-      const card = document.createElement('div');
-      card.className = 'blessing-card';
-      card.innerHTML = `
-        <div class="blessing-card-header">
-          <span class="blessing-author">${escapeHtml(item.author)}</span>
-          <span class="blessing-date">${escapeHtml(item.date)}</span>
-        </div>
-        <p class="blessing-message">${escapeHtml(item.message)}</p>
-      `;
-      blessingsList.appendChild(card);
-    });
-  };
-
-  if (guestbookForm) {
-    guestbookForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const authorInput = document.getElementById('blessingAuthor');
-      const messageInput = document.getElementById('blessingText');
-
-      const author = authorInput.value.trim();
-      const message = messageInput.value.trim();
-
-      if (!author || !message) return;
-
-      const newEntry = {
-        author: author,
-        date: 'Just now',
-        message: message
-      };
-
-      let existing = [];
-      try {
-        const stored = localStorage.getItem('luca_godwin_blessings');
-        existing = stored ? JSON.parse(stored) : defaultBlessings;
-      } catch (err) {
-        existing = defaultBlessings;
-      }
-
-      existing.unshift(newEntry);
-      try {
-        localStorage.setItem('luca_godwin_blessings', JSON.stringify(existing));
-      } catch (err) {}
-
-      authorInput.value = '';
-      messageInput.value = '';
-
-      loadBlessings();
-      showToast('Thank you! Your heartfelt blessing has been shared.');
-    });
-
-    loadBlessings();
-  }
-
-  // 9. Photo Showcase Carousel ("A Beautiful Moment")
+  // 8. Photo Showcase Carousel ("A Beautiful Moment")
   const trackContainer = document.getElementById('galleryTrackContainer');
   const track = document.getElementById('galleryTrack');
   const prevBtn = document.getElementById('galleryPrevBtn');

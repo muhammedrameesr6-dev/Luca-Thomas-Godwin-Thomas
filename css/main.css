@@ -912,11 +912,28 @@ h1, h2, h3, h4, .font-cormorant {
 
 .family-parents-names {
   font-family: var(--font-cormorant);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--color-deep-charcoal);
   margin-bottom: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.family-ampersand {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.75em;
+  color: var(--color-pastel-blue-dark);
+  margin: 0.1rem 0;
+  display: block;
+  text-align: center;
 }
 
 .family-parents-title {
@@ -1909,10 +1926,17 @@ h1, h2, h3, h4, .font-cormorant {
 
 .closing-parents-sign {
   font-family: var(--font-cormorant);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.6rem);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--color-deep-charcoal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0.35rem 0;
 }
 
 /* Blessings Guestbook Component */
