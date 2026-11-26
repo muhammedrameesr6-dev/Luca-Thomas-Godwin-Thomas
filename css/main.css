@@ -212,6 +212,7 @@ h1, h2, h3, h4, .font-cormorant {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
 }
 
 .nav-logo {
@@ -2140,11 +2141,26 @@ h1, h2, h3, h4, .font-cormorant {
    Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
+  .nav-container {
+    position: relative;
+    justify-content: flex-end;
+  }
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    white-space: nowrap;
+  }
   .nav-links, .btn-rsvp-nav {
     display: none;
   }
   .hamburger-btn {
     display: flex;
+    z-index: 2;
   }
   .children-grid {
     grid-template-columns: 1fr;
@@ -2213,6 +2229,12 @@ h1, h2, h3, h4, .font-cormorant {
 }
 
 @media (max-width: 640px) {
+  .nav-container {
+    padding: 0 1.15rem;
+  }
+  .nav-logo-text {
+    font-size: 1.35rem;
+  }
   .hero-section {
     padding-top: 5.5rem;
     padding-bottom: 3.5rem;
